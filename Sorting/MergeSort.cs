@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace Sorting
 {
     class Merge_Sort
@@ -63,13 +64,21 @@ namespace Sorting
         }
         static void Main(string[] args)
         {
-            int[] Arr = new int[] { 1, 100, 45, 62, 3, 2, 1000};
+            int[] Arr = new int[] { 1, 100, 45, 62, 3, 2, 1000 };
+
+            //Merge Sort
             MergeSort(Arr);
-            //printing 
+            Console.WriteLine("Sorting using Merge Sort Method");
             for (int i = 0; i < Arr.Length; i++)
             {
                 Console.WriteLine(Arr[i]);
             }
+
+            //Counting Sort
+            Console.WriteLine("Sorting using Counting Sort Method");
+            CountingSort obj = new CountingSort();
+            obj.Counting_Sort(Arr, 10001);
+
             Console.ReadKey();
         }
     }
