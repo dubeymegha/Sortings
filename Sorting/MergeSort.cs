@@ -79,6 +79,11 @@ namespace Sorting
             CountingSort obj = new CountingSort();
             obj.Counting_Sort(Arr, 10001);
 
+            //Heap Sort
+            Console.WriteLine("Sorting using Heap Sort Method");
+            HeapSort heap = new HeapSort();
+            heap.Heap_Sort(Arr);
+
             Console.ReadKey();
         }
     }
