@@ -1,6 +1,5 @@
 ﻿using System;
 
-
 namespace Sorting
 {
     class Merge_Sort
@@ -41,7 +40,15 @@ namespace Sorting
             }
 
         }
-        static void MergeSort(int[] Arr)
+
+        public void Print(int[] Arr)
+        {
+            for (int i = 0; i < Arr.Length; i++)
+            {
+                Console.WriteLine(Arr[i]);
+            }
+        }
+        public void MergeSort(int[] Arr)
         {
             if (Arr.Length < 2)
                 return;
@@ -61,30 +68,6 @@ namespace Sorting
             MergeSort(L);
             MergeSort(R);
             Merge(L, R, Arr);
-        }
-        static void Main(string[] args)
-        {
-            int[] Arr = new int[] { 1, 100, 45, 62, 3, 2, 1000 };
-
-            //Merge Sort
-            MergeSort(Arr);
-            Console.WriteLine("Sorting using Merge Sort Method");
-            for (int i = 0; i < Arr.Length; i++)
-            {
-                Console.WriteLine(Arr[i]);
-            }
-
-            //Counting Sort
-            Console.WriteLine("Sorting using Counting Sort Method");
-            CountingSort obj = new CountingSort();
-            obj.Counting_Sort(Arr, 10001);
-
-            //Heap Sort
-            Console.WriteLine("Sorting using Heap Sort Method");
-            HeapSort heap = new HeapSort();
-            heap.Heap_Sort(Arr);
-
-            Console.ReadKey();
         }
     }
 }
